@@ -1,0 +1,9 @@
+- hosts: all
+  remote_user: ec2-user
+  become: true
+  become_method: sudo
+  roles:
+    - disable-selinux
+    - upgrade-packages
+    - install-development-tools
+    - install-postgresql-server
